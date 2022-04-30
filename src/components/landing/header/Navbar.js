@@ -107,7 +107,7 @@ const Navbar = ({ setNavActive, navActive }) => {
                                     </div>
                                 </Link>
                                 {/* </a> */}
-                                <a class="nav-link" href='http://34.216.160.104:3000/#/swap'>
+                                <a class="nav-link" href='https://swap.defikings.app/#/swap'>
                                     <div className='sidebar-compo-innerContent'>
                                         <ul onClick={() => { setBlueShow(!blueshow); setShow(true) }} className="list-inline d-flex align-items-center">
                                             <li className="list-inline-item">
