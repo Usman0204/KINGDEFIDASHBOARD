@@ -64,7 +64,7 @@ function Glossary({ active }) {
                                         </div>
                                         <div className='col-md-6 col-12'
                                         >
-                                            <p className='mt-1 text-clr'>13 %</p>
+                                            <p className='mt-1 text-clr'>7 %</p>
                                             <p className='mt-1 text-clr'>BUSD</p>
                                         </div>
                                     </div>
