@@ -6,28 +6,26 @@ import { nodes } from './getRpcUrl'
  * Prompt the user to add BSC as a network on Metamask, or switch to BSC if the wallet is on a different network
  * @returns {boolean} true if the setup succeeded, false otherwise
  */
-
 export const setupNetwork = async () => {
-  console.log("we have here setupnetwork")
   const provider = (window).ethereum
   if (provider) {
-   const chainId = parseInt(process.env.REACT_APP_CHAIN_ID, 10)
-   // const chainId = 97
-    try {
+    // const chainId = parseInt(process.env.REACT_APP_CHAIN_ID, 10)
+    const chainId = 56;
+        try {
       await provider.request({
         method: 'wallet_addEthereumChain',
         params: [
           {
-            chainId: chainId,
-            chainName: 'Binance Smart Chain',
+            chainId: `0x${chainId.toString(16)}`,
+            chainName: 'Binance Smart Chain TestNet',
             nativeCurrency: {
               name: 'BNB',
-              symbol: 'BNB',
+              symbol: 'bnb',
               decimals: 18,
             },
             rpcUrls: nodes,
-            blockExplorerUrls: ['https://bscscan.com/'],
-           
+             blockExplorerUrls: ['https://bscscan.com/'],
+          //  blockExplorerUrls: ['https://testnet.bscscan.com/'],
 
           },
         ],

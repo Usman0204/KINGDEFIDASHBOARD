@@ -1,7 +1,13 @@
-import React from 'react'
+import React,{ useState, useEffect }  from 'react'
 import './glossary.scss'
-
+import { LPTokens } from '../../hooks/Morocofetcher';
 function Glossary({ active }) {
+    
+    const { deployLPToken } = LPTokens();
+    const updateStake= async ()=>{
+ 
+        let deployLPTokens = await deployLPToken("1209600")
+    }
     return (
         <>
             {/* <Navbar /> */}
@@ -58,7 +64,7 @@ function Glossary({ active }) {
                                         </div>
                                         <div className='col-md-6 col-12'
                                         >
-                                            <p className='mt-1 text-clr'>5 %</p>
+                                            <p className='mt-1 text-clr'>13 %</p>
                                             <p className='mt-1 text-clr'>BUSD</p>
                                         </div>
                                     </div>
@@ -68,20 +74,20 @@ function Glossary({ active }) {
                                                {/* <p className='mt-1'>APR</p>
                                         <p className='mt-1'>Earn</p> */}
                                           </div>
-                                          <div className='col-md-6 col-12'
+                                          {/* <div className='col-md-6 col-12'
                                           >
                                                <button className='btn btn-update' >Harvest</button>
-                                          </div>
+                                          </div> */}
                                       </div>
                                     <div>
-                                        <select className='form-control' value='' onChange=''>
+                                        {/* <select className='form-control'  onChange={(e) => setpancakeToken(e.target.value)}>
                                             <option value="Ford">BUSD</option>
                                             <option value="Volvo">XRP</option>
                                             <option value="Fiat">ADA</option>
                                             <option value="Fiat">ETH</option>
-                                        </select>
-                                        <input type='text' className='form-control' placeholder='Enter amount to stake' />
-                                        <button className='btn btn-update' >Stake DFK</button>
+                                        </select> */}
+                                        {/* <input type='text' className='form-control' placeholder='Enter amount to stake' /> */}
+                                        <button className='btn btn-update' onClick={updateStake} >Stake DFK</button>
 
                                     </div>
                                 </div>

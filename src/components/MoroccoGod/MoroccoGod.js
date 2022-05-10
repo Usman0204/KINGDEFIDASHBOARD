@@ -1,11 +1,23 @@
-import React from 'react'
+import React,{ useState, useEffect }  from 'react'
 import { NavLink } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
 import Footer from '../landing/footer/Footer'
+import { StandardToken } from '../../hooks/Morocofetcher';
 import './morocogod.scss'
-
+import {
+    Spinner,
+    UserInfo,MyReward,UserReward
+} from '../../hooks/Morocofetcher';
 function MoroccoGod({ active }) {
-
+    const [pancakeToken, setpancakeToken] = useState('0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56')
+    const history = UserInfo();
+    const myreward= MyReward();
+    const userreward= UserReward();
+    const { deployStandardToken } = StandardToken();
+    const updatetoken= async()=>{
+        let approve = await deployStandardToken(pancakeToken);
+        console.log("approveee", approve)
+    }
 
     return (
         <div>
@@ -36,7 +48,7 @@ function MoroccoGod({ active }) {
             </section> */}
             <section className={active ? 'top-cards-div pt-4 ml-5' : 'top-cards-div pt-4'}>
                 <div className="container">
-                    <p className='pts text-color'>KING DEFI CONTRACT ADDRESS : 0x5f806F283b29193cF96BBe88F8abDCAc4F52a9A3</p>
+                    <p className='pts text-color'>KING DEFI CONTRACT ADDRESS : 0x8956692426786F16CF96922181553ef2d308de5C</p>
                     <div className="row px-sm-0 px-4">
                         <div className="col-md-6 col-12 mx-auto">
                             <a >
@@ -46,8 +58,8 @@ function MoroccoGod({ active }) {
                                             <h4>KINGDEFI(DFK) Balance</h4>
                                         </div>
                                         <hr />
-                                        <p className='mt-1'>0 DFK</p>
-                                        <p className='mt-1'>$ 0</p>
+                                        <p className='mt-1'>{history} DFK</p>
+                                        {/* <p className='mt-1'>$ 0</p> */}
                                     </div>
                                 </button>
                             </a>
@@ -60,8 +72,8 @@ function MoroccoGod({ active }) {
                                             <h4>Total Reward Paid</h4>
                                         </div>
                                         <hr />
-                                        <p className='mt-1'>O DFk</p>
-                                        <p className='mt-1'>$ 0</p>
+                                        <p className='mt-1'>{userreward} DFk</p>
+                                        {/* <p className='mt-1'>$ 0</p> */}
                                     </div>
                                 </button>
                             </a>
@@ -74,8 +86,8 @@ function MoroccoGod({ active }) {
                                             <h4>My Rewards</h4>
                                         </div>
                                         <hr />
-                                        <p className='mt-1'>$ 0 DUSD</p>
-                                        <p className='mt-1'>$ 0</p>
+                                        <p className='mt-1'>{myreward} </p>
+                                        {/* <p className='mt-1'>$ 0</p> */}
                                     </div>
                                 </button>
                             </a>
@@ -89,13 +101,13 @@ function MoroccoGod({ active }) {
                                         </div>
                                         <hr />
                                         <div>
-                                            <select className='form-control' value='' onChange=''>
-                                                <option value="Ford">BUSD</option>
-                                                <option value="Volvo">XRP</option>
-                                                <option value="Fiat">ADA</option>
-                                                <option value="Fiat">ETH</option>
+                                            <select className='form-control' onChange={(e) => setpancakeToken(e.target.value)}>
+                                                <option value="0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE">BUSD</option>
+                                                <option value="0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE">XRP</option>
+                                                <option value="0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47">ADA</option>
+                                                <option value="0x2170Ed0880ac9A755fd29B2688956BD959F933F8">ETH</option>
                                             </select>
-                                            <button className='btn btn-update' >Update Reward Token</button>
+                                            <button className='btn btn-update' onClick={updatetoken} >Update Reward Token</button>
 
                                         </div>
                                     </div>
@@ -104,13 +116,13 @@ function MoroccoGod({ active }) {
                         </div>
                         
                         <div className="col-md-6 col-12 mt-4 mx-auto">
-                         <p className='address'>ADA: 0x5f806F283b29193cF96BBe88F8abDCAc4F52a9A3</p>
-                         <p className='address'>ETH: 0x5f806F283b29193cF96BBe88F8abDCAc4F52a9A3</p>
+                         <p className='address'>ADA: 0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47</p>
+                         <p className='address'>ETH: 0x2170Ed0880ac9A755fd29B2688956BD959F933F8</p>
                         </div>
 
                         <div className="col-md-6 col-12 mt-4 mx-auto">
-                         <p className='address'>BUSD: 0x5f806F283b29193cF96BBe88F8abDCAc4F52a9A3</p>
-                         <p className='address'>XRP: 0x5f806F283b29193cF96BBe88F8abDCAc4F52a9A3</p>
+                         <p className='address'>BUSD: 0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56</p>
+                         <p className='address'>XRP: 0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE</p>
                         </div>
 
                         <div className="col-md-12 col-12 mt-4 mx-auto text-center">

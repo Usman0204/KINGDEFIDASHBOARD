@@ -16,8 +16,6 @@ import Evanglism from '../../evangelism/Evanglism';
 const Navbar = ({ setNavActive, navActive }) => {
 
     const { account } = useWeb3React();
-    console.log("account we have", account)
-    // console.log("account",account)
     const { login, logout } = useAuth();
     const [show, setShow] = useState(false)
     const [blueshow, setBlueShow] = useState(false)
@@ -25,6 +23,7 @@ const Navbar = ({ setNavActive, navActive }) => {
     //     window.$("#exampleModalLong").modal('show');
     // }
     const connectMetaMask = () => {
+        console.log("here", account)
         localStorage.setItem("connectorId", "injected")
         if (account) {
             logout()
