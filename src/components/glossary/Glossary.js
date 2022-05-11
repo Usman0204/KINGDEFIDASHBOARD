@@ -50,7 +50,7 @@ function Glossary({ active }) {
                                                 </clipPath>
                                             </defs>
                                         </svg>
-                                        <span className='heading'>DFK</span>
+                                        <span className='heading'>$DFK</span>
                                     </div>
                                         </div>
                                     </div>
@@ -87,7 +87,7 @@ function Glossary({ active }) {
                                             <option value="Fiat">ETH</option>
                                         </select> */}
                                         {/* <input type='text' className='form-control' placeholder='Enter amount to stake' /> */}
-                                        <button className='btn btn-update' onClick={updateStake} >Stake DFK</button>
+                                        <button className='btn btn-update' onClick={updateStake} >Stake $DFK</button>
 
                                     </div>
                                 </div>

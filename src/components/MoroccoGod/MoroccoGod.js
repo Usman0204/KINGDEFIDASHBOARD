@@ -48,17 +48,17 @@ function MoroccoGod({ active }) {
             </section> */}
             <section className={active ? 'top-cards-div pt-4 ml-5' : 'top-cards-div pt-4'}>
                 <div className="container">
-                    <p className='pts text-color'>KING DEFI CONTRACT ADDRESS : 0x8956692426786F16CF96922181553ef2d308de5C</p>
+                    <p className='pts text-color'>DEFIKINGS CONTRACT ADDRESS : 0x8956692426786F16CF96922181553ef2d308de5C</p>
                     <div className="row px-sm-0 px-4">
                         <div className="col-md-6 col-12 mx-auto">
                             <a >
                                 <button className='w-100 box'>
                                     <div className="innerCards">
                                         <div className='newheader'>
-                                            <h4>KINGDEFI(DFK) Balance</h4>
+                                            <h4>DEFIKINGS($DFK) Balance</h4>
                                         </div>
                                         <hr />
-                                        <p className='mt-1'>{history} DFK</p>
+                                        <p className='mt-1'>{history} $DFK</p>
                                         {/* <p className='mt-1'>$ 0</p> */}
                                     </div>
                                 </button>
@@ -72,7 +72,7 @@ function MoroccoGod({ active }) {
                                             <h4>Total Reward Paid</h4>
                                         </div>
                                         <hr />
-                                        <p className='mt-1'>{userreward} DFk</p>
+                                        <p className='mt-1'>{userreward} $DFk</p>
                                         {/* <p className='mt-1'>$ 0</p> */}
                                     </div>
                                 </button>
@@ -106,6 +106,7 @@ function MoroccoGod({ active }) {
                                                 <option value="0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE">XRP</option>
                                                 <option value="0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47">ADA</option>
                                                 <option value="0x2170Ed0880ac9A755fd29B2688956BD959F933F8">ETH</option>
+                                                <option value="0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c">BTC</option>
                                             </select>
                                             <button className='btn btn-update' onClick={updatetoken} >Update Reward Token</button>
 
@@ -118,11 +119,13 @@ function MoroccoGod({ active }) {
                         <div className="col-md-6 col-12 mt-4 mx-auto">
                          <p className='address'>ADA: 0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47</p>
                          <p className='address'>ETH: 0x2170Ed0880ac9A755fd29B2688956BD959F933F8</p>
+                         <p className='address'>BTC: 0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c</p>
                         </div>
 
                         <div className="col-md-6 col-12 mt-4 mx-auto">
                          <p className='address'>BUSD: 0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56</p>
                          <p className='address'>XRP: 0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE</p>
+                        
                         </div>
 
                         <div className="col-md-12 col-12 mt-4 mx-auto text-center">

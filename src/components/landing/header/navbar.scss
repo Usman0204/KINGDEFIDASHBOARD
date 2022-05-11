@@ -250,6 +250,9 @@
     filter: invert(41%) sepia(47%) saturate(2442%) hue-rotate(-116deg) brightness(85%) contrast(45%);
 }
 @media (max-width: 600px) {
+    .img-fluid{
+        margin: 0 20px !important;
+    }
     .navbar-brand {
         width: 67%;
     }
