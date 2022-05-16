@@ -146,11 +146,11 @@ const Navbar = ({ setNavActive, navActive }) => {
                                 <div className='sidebar-compo-footer '>
 
                                     <div className="footer-logos d-flex justify-content-between pt-3 flex-wrap">
-                                        <a target='_blank' href="">  <img src="hash-max-assets/sidebar/sidebar-footer/telegram-icon.svg" alt="" /></a>
-                                        <a target='_blank' href="">   <img src="hash-max-assets/sidebar/sidebar-footer/twitter-icon.svg" alt="" /></a>
-                                        <a target='_blank' href="">   <img src="hash-max-assets/sidebar/sidebar-footer/github-icon.svg" alt="" /></a>
-                                        <a target='_blank' href="">   <img src="hash-max-assets/sidebar/sidebar-footer/facebook-icon.svg" alt="" /></a>
-                                        <a target='_blank' href="">  <img src="hash-max-assets/sidebar/sidebar-footer/discord-icon.svg" alt="" /></a>
+                                        <a target='_blank' href="https://t.me/officialdefikingscrypto">  <img src="hash-max-assets/sidebar/sidebar-footer/telegram-icon.svg" alt="" /></a>
+                                        <a target='_blank' href="https://twitter.com/defikingscrypto">   <img src="hash-max-assets/sidebar/sidebar-footer/twitter-icon.svg" alt="" /></a>
+                                        <a target='_blank' href="https://github.com/Usman0204/KINGDEFIDASHBOARD">   <img src="hash-max-assets/sidebar/sidebar-footer/github-icon.svg" alt="" /></a>
+                                        <a target='_blank' href="https://www.facebook.com/DefiKingsCrypto">   <img src="hash-max-assets/sidebar/sidebar-footer/facebook-icon.svg" alt="" /></a>
+                                        <a target='_blank' href="https://www.reddit.com/r/DefiKingsCrypto/">  <img src="hash-max-assets/sidebar/sidebar-footer/discord-icon.svg" alt="" /></a>
                                     </div>
                                 </div>
                             }
