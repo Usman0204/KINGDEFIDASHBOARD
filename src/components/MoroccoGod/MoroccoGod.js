@@ -48,14 +48,14 @@ function MoroccoGod({ active }) {
             </section> */}
             <section className={active ? 'top-cards-div pt-4 ml-5' : 'top-cards-div pt-4'}>
                 <div className="container">
-                    <p className='pts text-color'>DEFIKINGS CONTRACT ADDRESS : 0x8956692426786F16CF96922181553ef2d308de5C</p>
+                    <p className='pts text-color'>DEFI KINGS CONTRACT ADDRESS : 0x8956692426786F16CF96922181553ef2d308de5C</p>
                     <div className="row px-sm-0 px-4">
                         <div className="col-md-6 col-12 mx-auto">
                             <a >
                                 <button className='w-100 box'>
                                     <div className="innerCards">
                                         <div className='newheader'>
-                                            <h4>DEFIKINGS($DFK) Balance</h4>
+                                            <h4>DEFI KINGS($DFK) Balance</h4>
                                         </div>
                                         <hr />
                                         <p className='mt-1'>{history} $DFK</p>
