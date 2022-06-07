@@ -129,7 +129,7 @@ function MoroccoGod({ active }) {
                         </div>
 
                         <div className="col-md-12 col-12 mt-4 mx-auto text-center">
-                         <p className='address text-center'>*Add those addresses to their wallet so they can see the tokens in their wallet</p>
+                         <p className='address text-center'>*Add these addresses to your wallet so you can see the tokens in your wallet</p>
                         
                         </div>
                     </div>

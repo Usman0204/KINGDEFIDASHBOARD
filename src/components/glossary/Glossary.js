@@ -57,7 +57,7 @@ function Glossary({ active }) {
                                    
                                     
                                     <div className='row px-sm-0 px-4'>
-                                    <p className='text-clr'>King's Ransom Staking pays you for staking your $DFK tokens for 14 days. 2% of buy and 5% of sell volume is distributed to the staking pool and paid out in BUSD! Additionally, all utilities we develop will pay King's Ransom, so you get EVEN MORE! Simply stake your $DFK, and watch for your payday every 14 days! Must re-stake every 14 days to keep your tokens staked and earning your share of the King’s Ransom!</p>
+                                    <p className='text-clr'>King's Ransom Staking pays you for staking your $DFK tokens for 14 days. 2% of buy and 5% of sell volume is distributed to the staking pool and paid out in BUSD! Additionally, all utilities we develop will pay King's Ransom, so you get EVEN MORE! Simply stake your $DFK, and watch for your payday every 14 days! Tokens are LOCKED for 14 days and you must re-stake every 14 days to keep your tokens staked and earning your share of the King’s Ransom!</p>
                                         <div className='col-md-6 col-12'
                                         >
                                            
