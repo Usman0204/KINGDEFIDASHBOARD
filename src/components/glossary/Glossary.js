@@ -1,22 +1,26 @@
 import React,{ useState, useEffect }  from 'react'
 import './glossary.scss'
 import { useWeb3React } from '@web3-react/core'
-import { LPTokens,StakedInfo,StakedInfoDuration } from '../../hooks/Morocofetcher';
+import { LPTokens,StakedInfo,StakedInfoDuration,UserInfo } from '../../hooks/Morocofetcher';
 
 
 function Glossary({ active }) {
     const { account } = useWeb3React();
     var fetchBalance=StakedInfo();
+    const history = UserInfo();
     const fetchBalanceD= StakedInfoDuration();
     const [date,setd]=useState(0);
     const { deployLPToken } = LPTokens();
+    console.log("metoo",fetchBalanceD)
+    console.log("meto",fetchBalance?.val2)
     const updateStake= async ()=>{
  
         let deployLPTokens = await deployLPToken("1209600")
     }
 
     useEffect(() => {
-        var utcSeconds =fetchBalanceD;
+        console.log(fetchBalanceD)
+        var utcSeconds = JSON.stringify (fetchBalance?.val1);
         var d = new Date(0); 
         d.setUTCSeconds(utcSeconds);
         setd(d);
@@ -84,9 +88,9 @@ function Glossary({ active }) {
                                         <div className='col-md-6 col-12'
                                         >
                                             
-                                            <p className='mt-1 text-clr'>{fetchBalance?.val1 }</p>
-                                          <p className='mt-1 text-clr'>{fetchBalanceD ? new Date(date * 1000).toUTCString() : 'No found'}</p>
-                                            
+                                           
+                                          <p className='mt-1 text-clr'> { fetchBalance?.val2?    history / 10**9:'0'}</p>
+                                          <p className='mt-1 text-clr'> {fetchBalance?.val2 != 0  ? new Date(fetchBalance?.val1 * 1000).toUTCString() : 'No Found'}    </p>
                                         </div>
                                     </div>
                                     <div className='row'>

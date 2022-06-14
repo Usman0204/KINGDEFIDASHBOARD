@@ -152,14 +152,15 @@ const Spinner = () => {
         try {
          
            let stakeInfo = await contract.methods.getStakingInfo(account).call();
-            if(stakeInfo){
-              let dumObj = {
-                val1: stakeInfo[0],
-                val2: stakeInfo[1]
-              }
-              setstakeInfo(dumObj)
+            
+          //  await setstakeInfo(stakeInfo);
+          if(stakeInfo){
+            let dumObj = {
+              val1: stakeInfo[0],
+              val2: stakeInfo[1]
             }
-          
+           await setstakeInfo(dumObj)
+          }
         } catch (error) {
           
          
@@ -189,8 +190,8 @@ const Spinner = () => {
       const fetchBalanceD = async () => {
         try {
          
-           let stakeInfoDuration = await contract.methods.getStakingInfoDuration(account).call();
-         
+           let stakeInfoDuration = await contract.methods.StakingUntilDate(account).call();
+       
            await setstakeInfoDuration(stakeInfoDuration);
           
         } catch (error) {
