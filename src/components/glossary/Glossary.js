@@ -1,13 +1,29 @@
 import React,{ useState, useEffect }  from 'react'
 import './glossary.scss'
-import { LPTokens } from '../../hooks/Morocofetcher';
+import { useWeb3React } from '@web3-react/core'
+import { LPTokens,StakedInfo,StakedInfoDuration } from '../../hooks/Morocofetcher';
+
+
 function Glossary({ active }) {
-    
+    const { account } = useWeb3React();
+    var fetchBalance=StakedInfo();
+    const fetchBalanceD= StakedInfoDuration();
+    const [date,setd]=useState(0);
     const { deployLPToken } = LPTokens();
     const updateStake= async ()=>{
  
         let deployLPTokens = await deployLPToken("1209600")
     }
+
+    useEffect(() => {
+        var utcSeconds =fetchBalanceD;
+        var d = new Date(0); 
+        d.setUTCSeconds(utcSeconds);
+        setd(d);
+        console.log("date", d)
+      }, [account]);
+ 
+   
     return (
         <>
             {/* <Navbar /> */}
@@ -62,14 +78,15 @@ function Glossary({ active }) {
                                         >
                                            
                                            
-                                            <p className='mt-1 text-clr'>Earn :</p>
-                                             <p className='mt-1 text-clr'>My Reward  :</p>
+                                            <p className='mt-1 text-clr'>Total Staked</p>
+                                             <p className='mt-1 text-clr'>Reward paid time  :</p>
                                         </div>
                                         <div className='col-md-6 col-12'
                                         >
                                             
-                                            <p className='mt-1 text-clr'>BUSD</p>
-                                            <p className='mt-1 text-clr'>0</p>
+                                            <p className='mt-1 text-clr'>{fetchBalance?.val1 }</p>
+                                          <p className='mt-1 text-clr'>{fetchBalanceD ? new Date(date * 1000).toUTCString() : 'No found'}</p>
+                                            
                                         </div>
                                     </div>
                                     <div className='row'>

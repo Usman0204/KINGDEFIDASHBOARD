@@ -50,7 +50,7 @@ function MoroccoGod({ active }) {
                 <div className="container">
                     <p className='pts text-color'>DEFI KINGS CONTRACT ADDRESS : 0x8956692426786F16CF96922181553ef2d308de5C</p>
                     <div className="row px-sm-0 px-4">
-                        <div className="col-md-6 col-12 mx-auto">
+                        <div className="col-md-6 col-12 mt-4 mx-auto">
                             <a >
                                 <button className='w-100 box'>
                                     <div className="innerCards">
@@ -58,13 +58,13 @@ function MoroccoGod({ active }) {
                                             <h4>DEFI KINGS($DFK) Balance</h4>
                                         </div>
                                         <hr />
-                                        <p className='mt-1'>{history} $DFK</p>
-                                        {/* <p className='mt-1'>$ 0</p> */}
+                                        <p className='mt-1'>{history / 10**9} $DFK</p>
+                                       
                                     </div>
                                 </button>
                             </a>
                         </div>
-                        <div className="col-md-6 col-12 mx-auto">
+                        {/* <div className="col-md-6 col-12 mx-auto">
                             <a >
                                 <button className='w-100'>
                                     <div className="innerCards ">
@@ -73,7 +73,7 @@ function MoroccoGod({ active }) {
                                         </div>
                                         <hr />
                                         <p className='mt-1'>{userreward} $DFk</p>
-                                        {/* <p className='mt-1'>$ 0</p> */}
+                                       
                                     </div>
                                 </button>
                             </a>
@@ -87,11 +87,11 @@ function MoroccoGod({ active }) {
                                         </div>
                                         <hr />
                                         <p className='mt-1'>{myreward} </p>
-                                        {/* <p className='mt-1'>$ 0</p> */}
+                                      
                                     </div>
                                 </button>
                             </a>
-                        </div>
+                        </div> */}
                         <div className="col-md-6 col-12 mt-4 mx-auto">
                             <a>
                                 <button className='w-100'>

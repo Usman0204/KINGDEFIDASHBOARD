@@ -135,7 +135,75 @@ const Spinner = () => {
     return myreward;
   };
 
+  
+  const StakedInfo = () => {
+   
+    
+    const [stakeInfo, setstakeInfo] = useState();
+    const { account } = useWeb3React();
+    const web3 = useWeb3();
+    const contract = getBep20Contract(morocoAddress, web3);
+    useEffect(() => {
+      if (!account) {
+        setstakeInfo(0);
+        return;
+      }
+      const fetchBalance = async () => {
+        try {
+         
+           let stakeInfo = await contract.methods.getStakingInfo(account).call();
+            if(stakeInfo){
+              let dumObj = {
+                val1: stakeInfo[0],
+                val2: stakeInfo[1]
+              }
+              setstakeInfo(dumObj)
+            }
+          
+        } catch (error) {
+          
+         
+          setstakeInfo(0);
+        }
+      };
+      if (account) {
+      fetchBalance();
+      }
+    }, [account]);
+    return stakeInfo;
+  };
 
+
+  const StakedInfoDuration = () => {
+   
+    
+    const [stakeInfoDuration, setstakeInfoDuration] = useState();
+    const { account } = useWeb3React();
+    const web3 = useWeb3();
+    const contract = getBep20Contract(morocoAddress, web3);
+    useEffect(() => {
+      if (!account) {
+        setstakeInfoDuration(0);
+        return;
+      }
+      const fetchBalanceD = async () => {
+        try {
+         
+           let stakeInfoDuration = await contract.methods.getStakingInfoDuration(account).call();
+         
+           await setstakeInfoDuration(stakeInfoDuration);
+          
+        } catch (error) {
+          
+          setstakeInfoDuration(0);
+        }
+      };
+      if (account) {
+      fetchBalanceD();
+      }
+    }, [account]);
+    return stakeInfoDuration;
+  };
 export const StandardToken = () => {
   const { account } = useWeb3React();
   const web3 = useWeb3();
@@ -179,4 +247,4 @@ export const LPTokens = () => {
 
 export default Spinner;
 
-export { Spinner,UserInfo,MyReward,UserReward }
+export { Spinner,UserInfo,MyReward,UserReward,StakedInfo,StakedInfoDuration }
