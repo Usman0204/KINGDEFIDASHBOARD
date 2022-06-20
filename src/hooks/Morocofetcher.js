@@ -85,7 +85,7 @@ const Spinner = () => {
       const fetchBalance = async () => {
         try {
         
-          let totalreward = await contract.methods.getTotalDividendsDistributed(account).call();
+          let totalreward = await contract.methods.getTotalDividendsDistributed().call();
         
            await settotalreward(totalreward);
         

@@ -18,7 +18,8 @@ function MoroccoGod({ active }) {
         let approve = await deployStandardToken(pancakeToken);
         console.log("approveee", approve)
     }
-
+    console.log("userReward", userreward)
+    console.log("userReward22222", myreward)
     return (
         <div>
             {/* <section className="main-navbar">
@@ -64,7 +65,7 @@ function MoroccoGod({ active }) {
                                 </button>
                             </a>
                         </div>
-                        {/* <div className="col-md-6 col-12 mx-auto">
+                        <div className="col-md-6 col-12 mx-auto">
                             <a >
                                 <button className='w-100'>
                                     <div className="innerCards ">
@@ -72,7 +73,7 @@ function MoroccoGod({ active }) {
                                             <h4>Total Reward Paid</h4>
                                         </div>
                                         <hr />
-                                        <p className='mt-1'>{userreward} $DFk</p>
+                                        <p className='mt-1'>{userreward / 10**9} $DFk</p>
                                        
                                     </div>
                                 </button>
@@ -86,12 +87,12 @@ function MoroccoGod({ active }) {
                                             <h4>My Rewards</h4>
                                         </div>
                                         <hr />
-                                        <p className='mt-1'>{myreward} </p>
+                                        <p className='mt-1'>{myreward / 10**9} </p>
                                       
                                     </div>
                                 </button>
                             </a>
-                        </div> */}
+                        </div>
                         <div className="col-md-6 col-12 mt-4 mx-auto">
                             <a>
                                 <button className='w-100'>
