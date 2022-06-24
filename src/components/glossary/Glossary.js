@@ -77,7 +77,8 @@ function Glossary({ active }) {
                                    
                                     
                                     <div className='row px-sm-0 px-4'>
-                                    <p className='text-clr'>King's Ransom Staking pays you for staking your $DFK tokens for 14 days. 2% of buy and 5% of sell volume is distributed to the staking pool and paid out in BUSD! Additionally, all utilities we develop will pay King's Ransom, so you get EVEN MORE! Simply stake your $DFK, and watch for your payday every 14 days! Tokens are LOCKED for 14 days and you must re-stake every 14 days to keep your tokens staked and earning your share of the King’s Ransom!</p>
+                                    <p className='text-clr'>
+King's Ransom Staking pays you for staking your $DFK tokens for 14 days. Staking pays you 7 TIMES MORE in volume based rewards compared to those that do not stake! Additionally, all utilities we develop will pay King's Ransom, so you get EVEN MORE! Simply stake your $DFK and watch the residual income get delivered to YOU! Tokens are LOCKED for 14 days and you must re-stake every 14 days to keep your tokens staked and continue earning your share of the King’s Ransom! When you stake, ALL $DFK tokens in your wallet will be staked. If you do not want to stake all, send some to a different wallet before staking. There are no wallet to wallet transfer taxes. If you buy more $DFK tokens after you stake, you can stake again to add them before your initial 14 days are up, but it will restart the timer for all tokens.</p>
                                         <div className='col-md-6 col-12'
                                         >
                                            
