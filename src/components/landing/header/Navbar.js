@@ -106,7 +106,7 @@ const Navbar = ({ setNavActive, navActive }) => {
                                     </div>
                                 </Link>
                                 {/* </a> */}
-                                <a class="nav-link" href='https://pancakeswap.finance/swap?outputCurrency=0x8956692426786F16CF96922181553ef2d308de5C' target="_blank">
+                                <a class="nav-link" href='https://dapp-dfk-swap.netlify.app/swap' target="_blank">
                                     <div className='sidebar-compo-innerContent'>
                                         <ul onClick={() => { setBlueShow(!blueshow); setShow(true) }} className="list-inline d-flex align-items-center">
                                             <li className="list-inline-item">
