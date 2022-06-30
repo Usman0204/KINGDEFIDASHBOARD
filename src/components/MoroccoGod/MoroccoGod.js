@@ -103,7 +103,8 @@ function MoroccoGod({ active }) {
                                         <hr />
                                         <div>
                                             <select className='form-control' onChange={(e) => setpancakeToken(e.target.value)}>
-                                                <option value="0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE">BUSD</option>
+                                                <option value="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56">BUSD</option>
+                                                <option value="0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c">WBNB</option>
                                                 <option value="0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE">XRP</option>
                                                 <option value="0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47">ADA</option>
                                                 <option value="0x2170Ed0880ac9A755fd29B2688956BD959F933F8">ETH</option>
@@ -126,7 +127,7 @@ function MoroccoGod({ active }) {
                         <div className="col-md-6 col-12 mt-4 mx-auto">
                          <p className='address'>BUSD: 0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56</p>
                          <p className='address'>XRP: 0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE</p>
-                        
+                         <p className='address'>WBNB: 0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c</p>
                         </div>
 
                         <div className="col-md-12 col-12 mt-4 mx-auto text-center">
