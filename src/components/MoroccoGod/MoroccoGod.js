@@ -65,7 +65,7 @@ function MoroccoGod({ active }) {
                                 </button>
                             </a>
                         </div>
-                        <div className="col-md-6 col-12 mx-auto">
+                        {/* <div className="col-md-6 col-12 mx-auto">
                             <a >
                                 <button className='w-100'>
                                     <div className="innerCards ">
@@ -92,7 +92,7 @@ function MoroccoGod({ active }) {
                                     </div>
                                 </button>
                             </a>
-                        </div>
+                        </div> */}
                         <div className="col-md-6 col-12 mt-4 mx-auto">
                             <a>
                                 <button className='w-100'>
